@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script>
+        
+        window.onload = function () {
+            document.getElementById("btnClick").onclick = function () {
+                let nums = [2, 33, 4, 5, 6, 57, 8, 34, 54, 32, 56];
+                // let nums2 = [ 73, 81, 334, 544, 362, 576];
+                // nums[100] = 45;
+                // console.log(nums);
+                // nums.forEach(function (val,index,arr) {
+                //     console.log(val);
+                //     console.log(index);
+                //     console.log(arr);
+                // });
+                // console.log(nums);
+                // nums = nums.concat(nums2);
+
+                // // console.log(nums);
+
+                // var input = parseInt(prompt("Enter a number to find in the array"));
+                // if(nums.indexOf(input) !=-1){
+                //     console.log("Element is found and its index is : "+nums.indexOf(input) );
+                // }else{
+                //     console.log("Element not found");
+                // }
+
+                // var name = "I am writing some random string";
+
+                // for (let char of name) {
+                //     console.log(char);
+                // }
+
+                // console.log(name.indexOf(prompt("Enter Something to Find in the name")));
+                nums = nums.sort();
+                console.log(nums.sort());
+                // nums  = nums.reverse();
+                // console.log(nums);
+                // nums.push(465);
+            }
+        }        
+
+    </script>
+</head>
+
+<body>
+    <button id="btnClick">Click Me</button>
+</body>
+
+</html>
