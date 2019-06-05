@@ -1,0 +1,19 @@
+/*p{
+    background-color: aqua;
+    color: blue;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium';   
+} */
+.myPara1{
+    background-color: aqua;
+    color: blue;        
+}
+
+.myPara2{
+    background-color: yellow;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium';
+    margin-left: 100px;
+    margin-top: 100px;
+       
+}

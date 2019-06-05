@@ -1,0 +1,44 @@
+<!-- <html>
+    <head>
+        
+    </head>
+    <body>
+        <button onclick="alert('Hello World')">Click Me</button>
+    </body>
+</html> -->
+
+
+<!-- <html>
+    <head>
+        <script>
+        function TestFunc() {
+            // document.write("Let me change that");   
+        }
+        </script>    
+    </head>
+    <body>
+        <button onclick="TestFunc()">Click Me</button>
+    </body>    
+</html> -->
+
+<html>
+
+<head>
+    <script>
+
+        window.onload = function () {
+            document.getElementById("btnClick").onclick = function () {
+                console.log('Here');
+                console.info('Here');
+                console.warn('Here');
+                console.error('Here');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btnClick">Click Me</button>
+</body>
+
+</html>
