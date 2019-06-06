@@ -5,7 +5,7 @@
         
         window.onload = function () {
             document.getElementById("btnClick").onclick = function () {
-                let nums = [2, 33, 4, 5, 6, 57, 8, 34, 54, 32, 56];
+                //let nums = [2, 33, 4, 5, 6, 57, 8, 34, 54, 32, 56];
                 // let nums2 = [ 73, 81, 334, 544, 362, 576];
                 // nums[100] = 45;
                 // console.log(nums);
@@ -30,16 +30,68 @@
 
                 // for (let char of name) {
                 //     console.log(char);
-                // }
+                // // }
 
-                // console.log(name.indexOf(prompt("Enter Something to Find in the name")));
-                nums = nums.sort();
-                console.log(nums.sort());
-                // nums  = nums.reverse();
+                // // console.log(name.indexOf(prompt("Enter Something to Find in the name")));
+                // nums = nums.sort();
+                // console.log(nums.sort());
+                // // nums  = nums.reverse();
+                // // console.log(nums);
+                // // nums.push(465);
+
+                // let childNums = nums.slice(4,6);
+                // console.log(childNums);
+                // nums.splice(3,0,111,222,333);
                 // console.log(nums);
-                // nums.push(465);
+
+                
+                // let nums = new Array();
+                // nums.push(34);
+                // nums.push(23);
+                // nums.push(44);
+                // console.log(nums);
+                // let student = {
+                //     name:"Ram",
+                //     address:"Pune"
+                // };
+
+                // let stduent2 = new Object();
+                // stduent2.namea = "Amol";
+                // stduent2.addressa = "Pune";
+                
+                // console.log(stduent2);
+                
+
+                let pers = new Person();
+                pers.name = "Ram";
+                pers.someFunc();
+
+                let today = new Date();
+                console.log(today.getMonth());
+                
+                let somess = today.getDate().toString()
+                    .concat("-",(today.getMonth()+1).toString(),"-",(today.getUTCFullYear()).toString());
+                console.log(somess);
+                // console.log();
+//,
+                let someDate = new Date();
+                someDate.setDate(12);
+                someDate.setMonth(2);
+                someDate.setFullYear(2019);
+                console.log(someDate);
+                
             }
-        }        
+        }    
+
+        function Person(){
+            this.name;
+            this.address;
+            this.someProp;
+            var tempThis = this;
+            this.someFunc=function(){
+                console.log(tempThis.name);
+            }
+        }    
 
     </script>
 </head>
