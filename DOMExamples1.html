@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <script>
+        onload = function(){
+            document.getElementById("btnClick").onclick = myFunc;
+            // document.getElementById("btnClick").ondblclick = function () {
+            //     alert("Button Double Clicked");
+            // };
+
+            // document.getElementById("div1").onclick = function (event) {
+            //     // console.log(event);
+            //     alert(event.target.innerText);
+            // }
+
+            // document.getElementById("div1").onmouseenter = function (event) {
+            //     // alert("Mouse Entered");
+            // }
+
+            document.getElementById("txtName").onkeyup = function (event) {
+                //document.getElementById("div1").innerText = this.value;
+                // document.getElementsByClassName("myClass1")[0].innerText = this.value;
+                // document.getElementsByTagName("div")[0].innerText = this.value;
+
+                document.getElementsByName("div1")[0].innerText = this.value;
+                // console.log(document.getElementsByName("div1").length);
+
+
+            }
+
+            // document.getElementById("txtName").onkeydown = function (event) {
+            //     document.getElementById("div1").innerText = this.value;
+            // }
+
+            
+        }
+
+        function myFunc(){
+            //
+            // console.log(window);
+            // window.close();
+
+            var div = document.createElement("div");
+            div.innerText = "Parent DIV Created";
+            div.setAttribute("style",'background-color: aquagreen');
+            var childDiv = document.createElement("div");
+            childDiv.innerText = "Newly Created Child Div";
+            childDiv.addEventListener("click",function(){
+                alert("Child Div is clicked");
+            })
+            childDiv.setAttribute("id","childDiv1");
+            childDiv.setAttribute("style",'background-color: yellow');
+            div.appendChild(childDiv);
+            document.getElementById("div2").appendChild(div);        
+        }
+    </script>
+    <style>
+    .myClass1{
+        background-color: aqua;
+        color: blue;
+        font-weight: bold;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <button id="btnClick" onclick="myFunc()">Click Me</button> -->
+    <button id="btnClick">Click Me</button>
+    
+    <input type="text" id="txtName" />
+    <div id="div1" class="myClass1" name="div1">New Div Element</div>
+    <div id="div2" class="myClass1" name="div1">New Div Element</div>
+</body>
+
+</html>
