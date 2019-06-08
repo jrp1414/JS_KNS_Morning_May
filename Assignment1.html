@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation</title>
+        <script>
+            window.onload = function () {
+                document.getElementById("btn1").onclick = createStudTable;
+            }
+
+            function createStudTable() {
+                var students = [
+                                    {name:"Abc",address:"Pune"},
+                                    {name:"Def",address:"Mumbai"},
+                                    {name:"Ghi",address:"Bangalore"},
+                                    {name:"Jkl",address:"Hyderabad"},
+                               ];
+                console.log("Clicked button");
+                console.log(students);
+
+                var hdiv = document.getElementById("hdiv");
+                //console.log(div1);
+                var tb = document.createElement("table");
+                tb.setAttribute("id","tb");
+                hdiv.appendChild(tb);
+                var tr1 = document.createElement("tr");
+                tb.appendChild(tr1);
+                var th1 = document.createElement("th");
+                th1.innerText = "Name";
+                var th2 = document.createElement("th");
+                th2.innerText = "Address";
+                tr1.appendChild(th1);
+                tr1.appendChild(th2);
+
+                var tbdy = document.createElement("tbody");
+                tb.appendChild(tbdy);
+                tb.style="border: 5px;background-color: darkkhaki";
+
+                for (const stud of students) {
+                    var tr = document.createElement("tr");
+                    tbdy.appendChild(tr);
+                    var td1 = document.createElement("td");
+                    td1.innerText = stud.name;
+                    var td2 = document.createElement("td");
+                    td2.innerText = stud.address;
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h3>Create table using Javascript</h3>
+        <button type="button" id="btn1">Click Me</button>
+        <div id="hdiv">Table of students</div>
+    </body>
+</html>
