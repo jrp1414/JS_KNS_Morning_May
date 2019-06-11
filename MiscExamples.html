@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
+    <script>
+        // $(document).ready(function () {
+        //     $("#btnClick").one("click",function(){
+        //         alert("This is an one time click event");
+        //     });
+        // });
+        onload = function () {
+            var students = `[
+                { "name": "Ram", "address": "Pune","age":20 },
+                { "name": "Mohan", "address": "Mumbai","age":20 },
+                { "name": "Amol", "address": "Nashik","age":20 },
+                { "name": "Shiv", "address": "Hyderabad","age":20 }
+            ]`;
+
+            document.getElementById("btnClick").onclick = function () {
+            //  document.getElementById("ResultDiv").innerText = JSON.stringify(students);   
+                console.log(students);
+                console.log(JSON.parse(students));
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <button id="btnClick">Click Me</button>
+
+    <div id="ResultDiv"></div>
+
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <td>{{student.name}}</td>
+                <td>{{student.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

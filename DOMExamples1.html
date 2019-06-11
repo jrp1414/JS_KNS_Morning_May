@@ -32,6 +32,7 @@
             //     document.getElementById("div1").innerText = this.value;
             // }
 
+            document.getElementById("btnRemoveClick").onclick = RemoveEvent;    
             
         }
 
@@ -45,14 +46,29 @@
             div.setAttribute("style",'background-color: aquagreen');
             var childDiv = document.createElement("div");
             childDiv.innerText = "Newly Created Child Div";
-            childDiv.addEventListener("click",function(){
-                alert("Child Div is clicked");
-            })
+            childDiv.addEventListener("click",clickHandler);
             childDiv.setAttribute("id","childDiv1");
             childDiv.setAttribute("style",'background-color: yellow');
             div.appendChild(childDiv);
-            document.getElementById("div2").appendChild(div);        
+            document.getElementById("div2").appendChild(div);
+
+                    
         }
+        
+        function RemoveEvent() {
+            document.getElementById("btnClick").removeEventListener("click",myFunc);
+        }
+
+
+
+        function clickHandler(){
+            alert("Child Div is clicked");            
+        }
+
+        
+
+
+
 
         var students = [
             {name:"Ram",address:"Pune"},
@@ -60,6 +76,9 @@
             {name:"Amol",address:"Nashik"},
             {name:"Shiv",address:"Hyderabad"}
         ];
+
+        
+
     </script>
     <style>
     .myClass1{
@@ -73,7 +92,7 @@
 <body>
     <!-- <button id="btnClick" onclick="myFunc()">Click Me</button> -->
     <button id="btnClick">Click Me</button>
-    
+    <button id="btnRemoveClick">Remove Click Event</button>
     <input type="text" id="txtName" />
     <div id="div1" class="myClass1" name="div1">New Div Element</div>
     <div id="div2" class="myClass1" name="div1">New Div Element</div>
